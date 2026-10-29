@@ -5,7 +5,7 @@ export type Project = {
 }
 export type TimelineItem = {
   id: string; organization: string; role: Localized; period: Localized; kind?: Localized;
-  description: Localized; technologies: string[]; achievements: Localized[]; url?: string; image?: string
+  description: Localized; technologies: string[]; achievements: Localized[]; url?: string; image?: string; badge?: 'codewars'
 }
 export type Certificate = { id: string; title: Localized; issuer: string; date: Localized; file: string; image?: string; verifyUrl?: string }
 export type Profile = { name: Localized; portrait: string; email: string; github: string; linkedin: string; telegram: string; codewars: string; cv: string }
@@ -39,7 +39,21 @@ export const experience: TimelineItem[] = [{
   url:'https://www.linkedin.com/in/artur-shyshelau/edit/forms/position/3023942317/',
   image:'/images/it-incubator.jpg'
 }]
-export const education: TimelineItem[] = []
+export const education: TimelineItem[] = [{
+  id:'codewars-practice',
+  organization:'Codewars',
+  role:{en:'Problem-solving practice',ru:'Практика решения задач'},
+  period:{en:'Ongoing',ru:'Продолжаю'},
+  kind:{en:'Continuous learning',ru:'Саморазвитие'},
+  description:{
+    en:'I regularly solve coding challenges to strengthen my problem-solving skills and keep growing as a developer.',
+    ru:'Регулярно решаю задачи, чтобы развивать навыки решения проблем и расти как разработчик.'
+  },
+  technologies:['JavaScript','Algorithms'],
+  achievements:[],
+  url:profile.codewars,
+  badge:'codewars'
+}]
 export const certificates: Certificate[] = []
 
 // Projects and links were checked against the public GitHub repositories on 2026-10-29.
