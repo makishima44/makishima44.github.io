@@ -9,6 +9,7 @@ import { ProjectCard } from './components/ProjectCard'
 import { Timeline } from './components/Timeline'
 import { Certificates } from './components/Certificates'
 import { ContactSection } from './components/ContactSection'
+import { CursorTrail } from './components/CursorTrail'
 import { setLanguage } from './i18n'
 import './styles.css'
 
@@ -31,6 +32,7 @@ function App() {
   const reveal = reduced ? {} : { initial:{opacity:0,y:18}, whileInView:{opacity:1,y:0}, viewport:{once:true,amount:.16}, transition:{duration:.55} }
   const name = profile.name[i18n.language as 'en'|'ru'] || t('identity.namePlaceholder')
   return <>
+    <CursorTrail />
     <a className="skip-link" href="#main">{t('skip')}</a>
     <header className="site-header"><div className="container header-inner">
       <a className="wordmark" href="#top" aria-label={t('nav.home')}>a<span>.</span><small> / portfolio</small></a>
