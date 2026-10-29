@@ -8,12 +8,13 @@ export type TimelineItem = {
   description: Localized; technologies: string[]; achievements: Localized[]; url?: string
 }
 export type Certificate = { id: string; title: Localized; issuer: string; date: Localized; file: string; image?: string; verifyUrl?: string }
-export type Profile = { name: Localized; email: string; github: string; linkedin: string; telegram: string; codewars: string; cv: string }
+export type Profile = { name: Localized; portrait: string; email: string; github: string; linkedin: string; telegram: string; codewars: string; cv: string }
 
 // Contact details come from the public GitHub profile and its README.
 // TODO: Add a real CV PDF. Empty optional values stay hidden.
 export const profile: Profile = {
   name: { en: 'Artur Shyshelau', ru: 'Artur Shyshelau' },
+  portrait: '/images/artur-portrait.jpg',
   email: 'metallist15431543@email.com',
   github: 'https://github.com/makishima44',
   linkedin: 'https://www.linkedin.com/in/artur-shyshelau/',
