@@ -52,6 +52,22 @@
 .light .skill-nextjs,.light .skill-firebase,.light .skill-javascript{--skill-hover-color:#202630}
 .light .skill-nextjs .skill-icon svg,.light .skill-firebase .skill-icon svg{filter:brightness(0)}
 .light .skill-javascript .skill-icon svg{outline:1.5px solid #202630;outline-offset:1px;border-radius:2px}
+.timeline-disclosure{padding:0}
+.timeline-summary{display:block;list-style:none;padding:28px;cursor:pointer}
+.timeline-summary::-webkit-details-marker{display:none}
+.timeline-summary:focus-visible{outline:2px solid var(--accent);outline-offset:-5px;border-radius:12px}
+.timeline-disclosure-toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;padding-top:15px;border-top:1px solid var(--line);color:var(--accent);font-size:12px;font-weight:650}
+.timeline-hide-details{display:none}
+.timeline-disclosure[open] .timeline-show-details{display:none}
+.timeline-disclosure[open] .timeline-hide-details{display:inline}
+.timeline-disclosure[open] .timeline-disclosure-toggle svg{transform:rotate(180deg)}
+.timeline-disclosure-toggle svg{transition:transform .2s ease}
+.timeline-expanded{padding:22px 28px 28px;border-top:1px solid var(--line)}
+.timeline-expanded>p{margin:0 0 20px}
+.timeline-expanded h4{margin:0 0 10px;font-size:13px;color:var(--text)}
+.timeline-expanded ul{margin:0;padding-left:19px}
+.timeline-expanded li+li{margin-top:7px}
+@media(max-width:600px){.timeline-summary{padding:20px}.timeline-expanded{padding:18px 20px 22px}}
 @media(hover:hover){
   .skill-card:hover{box-shadow:0 14px 34px -21px color-mix(in srgb,var(--skill-hover-color,var(--skill-color)) 76%,transparent),0 0 0 1px color-mix(in srgb,var(--skill-hover-color,var(--skill-color)) 22%,transparent)}
   .project-card,.timeline-content,.certificate-card,.contact-link{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease,background-color .28s ease}

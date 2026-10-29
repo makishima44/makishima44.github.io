@@ -5,7 +5,7 @@ export type Project = {
 }
 export type TimelineItem = {
   id: string; organization: string; role: Localized; period: Localized; kind?: Localized;
-  description: Localized; technologies: string[]; achievements: Localized[]; url?: string; image?: string; badge?: 'codewars'
+  description: Localized; technologies: string[]; achievements: Localized[]; detailsIntro?: Localized; details?: Localized[]; url?: string; image?: string; badge?: 'codewars'
 }
 export type Certificate = { id: string; title: Localized; issuer: string; date: Localized; file: string; image?: string; verifyUrl?: string }
 export type Profile = { name: Localized; portrait: string; email: string; github: string; linkedin: string; telegram: string; codewars: string; cv: string }
@@ -28,14 +28,26 @@ export const experience: TimelineItem[] = [{
   id:'it-incubator-internship',
   organization:'IT-INCUBATOR',
   role:{en:'Frontend Developer',ru:'Frontend-разработчик'},
-  period:{en:'Sep 2025 – Jun 2026 · 10 mos',ru:'Сентябрь 2025 – июнь 2026 · 10 месяцев'},
+  period:{en:'Sep 2025 – Sep 2026 · 1 year',ru:'Сентябрь 2025 – сентябрь 2026 · 1 год'},
   kind:{en:'Internship',ru:'Стажировка'},
   description:{
-    en:'Worked in a team environment on a full-scale project, gaining hands-on experience with real development tasks, Git, code reviews, and team collaboration.',
-    ru:'Работал в команде над полноценным проектом: выполнял реальные задачи разработки, использовал Git, участвовал в проверке кода и командной работе.'
+    en:'Built a social platform alongside frontend and backend developers during a practical team internship.',
+    ru:'Разрабатывал социальную платформу вместе с frontend- и backend-разработчиками в команде.'
   },
-  technologies:['Git','Code review','Team collaboration'],
+  technologies:[],
   achievements:[],
+  detailsIntro:{
+    en:'Contributed to the team development of a social platform during the IT-INCUBATOR practical internship, working alongside frontend and backend developers.',
+    ru:'Участвовал в командной разработке социальной платформы в рамках практической стажировки IT-INCUBATOR. Работал совместно с frontend- и backend-разработчиками.'
+  },
+  details:[
+    {en:'Developed reusable React UI components and documented them in Storybook.',ru:'Разрабатывал переиспользуемые React UI-компоненты и документировал их в Storybook.'},
+    {en:'Built responsive registration and user profile pages from Figma designs.',ru:'Реализовал адаптивные страницы регистрации и профиля пользователя по макетам Figma.'},
+    {en:'Built a registration form with React Hook Form and Zod, including client-side validation, error handling, and REST API submission.',ru:'Разработал форму регистрации с использованием React Hook Form и Zod: клиентская валидация, обработка ошибок, отправка данных через REST API.'},
+    {en:'Implemented a profile page with infinite post loading (infinite scroll), pagination, and loading states.',ru:'Реализовал страницу профиля с бесконечной загрузкой публикаций (infinite scroll), пагинацией и обработкой состояний загрузки.'},
+    {en:'Integrated the frontend with backend APIs, aligned data formats, and resolved integration issues.',ru:'Интегрировал frontend с backend API, согласовывал формат данных и устранял ошибки интеграции.'},
+    {en:'Worked with feature branches, pull requests, code reviews, and Jira as part of the team development process.',ru:'Работал с feature-ветками, Pull Request, code review и Jira в рамках командного процесса разработки.'}
+  ],
   url:'https://www.linkedin.com/in/artur-shyshelau/edit/forms/position/3023942317/',
   image:'/images/it-incubator.jpg'
 }]
