@@ -17,3 +17,26 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 .hero-name{margin-top:32px;color:var(--muted);font:600 11px ui-monospace,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase}
 .section-heading h2{overflow-wrap:anywhere}
+.contact-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-top:43px}
+.contact-link{grid-column:span 2;min-height:177px;display:flex;flex-direction:column;justify-content:space-between;padding:22px;border:1px solid #ffffff18;border-radius:12px;background:#ffffff09;transition:transform .25s,border-color .25s,background .25s}
+.contact-link-featured{grid-column:span 3;min-height:210px;padding:27px;background:#ffffff0d}
+.contact-link-github{background:linear-gradient(135deg,#354d713b,#ffffff08)}
+.contact-link-codewars{background:linear-gradient(135deg,#8a4e3c2a,#ffffff08)}
+.contact-link:hover{transform:translateY(-3px);border-color:#b6ccff88;background-color:#ffffff14}
+.contact-link-top{display:flex;align-items:flex-start;justify-content:space-between;color:var(--accent)}
+.contact-link-icon{display:grid;place-items:center;width:43px;height:43px;border:1px solid #ffffff20;border-radius:10px;background:#ffffff12;color:var(--text)}
+.contact-link-icon img{width:27px;height:27px}
+.contact-link-body h3{font-size:20px;letter-spacing:-.04em;margin:0 0 4px}
+.contact-link-featured .contact-link-body h3{font-size:25px}
+.contact-link-body p,.contact-card .contact-link-body p{font-size:12px;line-height:1.55;margin:0;color:var(--muted);max-width:none}
+.contact-link-featured .contact-link-body p{font-size:13px;max-width:350px}
+.contact-link-detail{display:block;margin-top:12px;color:var(--accent);font:600 11px ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
+.light .contact-link{border-color:#b8c9df8a;background:#ffffff9c}
+.light .contact-link-github{background:linear-gradient(135deg,#dce7fb,#ffffff)}
+.light .contact-link-codewars{background:linear-gradient(135deg,#f4e8e3,#ffffff)}
+.light .contact-link:hover{border-color:var(--accent)}
+.light .contact-link-icon{border-color:#cad6e7;background:#f7f9fd}
+@media(max-width:820px){.contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-link,.contact-link-featured{grid-column:span 1}}
+@media(max-width:600px){.contact-grid{grid-template-columns:1fr;margin-top:30px}.contact-link,.contact-link-featured{min-height:150px;padding:20px}.contact-link-featured{min-height:180px}}
+.desktop-nav .nav-link{position:relative}
+.desktop-nav .nav-link.active:after{left:50%;bottom:-10px;margin:0;transform:translateX(-50%)}

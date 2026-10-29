@@ -38,7 +38,7 @@ npm run preview
 
 ## Update content
 
-Edit [`src/data/content.ts`](src/data/content.ts) to set your name, email, LinkedIn, Codewars and CV link. Put a real PDF in `public/cv/` before setting `profile.cv`. Missing links and the CV button are hidden automatically. The public GitHub link is already set to the account used for deployment.
+Edit [`src/data/content.ts`](src/data/content.ts) to update personal links. The current email, LinkedIn and Telegram URLs come from the public GitHub profile README; the Codewars URL comes from the GitHub profile link. Put a real PDF in `public/cv/` before setting `profile.cv`. Missing links and the CV button are hidden automatically.
 
 ### Projects
 
@@ -73,4 +73,4 @@ The workflow builds on every push to `main` and supports manual runs. It runs `n
 
 ## Attribution
 
-Technology marks come from [Simple Icons](https://simpleicons.org/) via `@icons-pack/react-simple-icons`, licensed under CC0-1.0. Brand names and marks belong to their respective owners.
+Technology and contact marks come from [Simple Icons](https://simpleicons.org/) via `@icons-pack/react-simple-icons`, licensed under CC0-1.0. The local LinkedIn SVG comes from [Devicon](https://github.com/devicons/devicon) (MIT). Brand names and marks belong to their respective owners.

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ArrowDown, ArrowRight, ArrowUpRight, Mail, Menu, Moon, Sun, X } from 'lucide-react'
-import { SiGithub } from '@icons-pack/react-simple-icons'
+import { ArrowDown, ArrowRight, ArrowUpRight, Menu, Moon, Sun, X } from 'lucide-react'
 import { motion, useReducedMotion } from 'motion/react'
 import { profile, projects, experience, education, certificates } from './data/content'
 import { skills } from './data/skills'
@@ -9,6 +8,7 @@ import { SkillCard } from './components/SkillCard'
 import { ProjectCard } from './components/ProjectCard'
 import { Timeline } from './components/Timeline'
 import { Certificates } from './components/Certificates'
+import { ContactSection } from './components/ContactSection'
 import { setLanguage } from './i18n'
 import './styles.css'
 
@@ -29,7 +29,6 @@ function App() {
   function toggleTheme() { const next = theme === 'dark' ? 'light' : 'dark'; document.documentElement.classList.toggle('light', next === 'light'); localStorage.setItem('portfolio-theme',next); setTheme(next) }
   const nav = (id: Id) => <a key={id} className={active===id?'nav-link active':'nav-link'} href={'#'+id} onClick={()=>setMenuOpen(false)}>{t('nav.'+id)}</a>
   const reveal = reduced ? {} : { initial:{opacity:0,y:18}, whileInView:{opacity:1,y:0}, viewport:{once:true,amount:.16}, transition:{duration:.55} }
-  const email = profile.email?.includes('@') ? profile.email : undefined
   const name = profile.name[i18n.language as 'en'|'ru'] || t('identity.namePlaceholder')
   return <>
     <a className="skip-link" href="#main">{t('skip')}</a>
@@ -55,7 +54,7 @@ function App() {
       <section id="education" className="section container section-compact"><motion.div {...reveal}><SectionHeading index="04" label={t('nav.education')} title={t('education.title')} intro={t('education.intro')}/></motion.div><Timeline items={education} emptyTitle={t('education.emptyTitle')} emptyText={t('education.emptyText')}/></section>
       <section id="projects" className="section section-tinted"><div className="container"><motion.div {...reveal}><SectionHeading index="05" label={t('nav.projects')} title={t('projects.title')} intro={t('projects.intro')}/></motion.div><div className="projects-grid">{projects.filter(p=>p.featured).sort((a,b)=>a.order-b.order).map((p,i)=><ProjectCard key={p.id} project={p} index={i}/>)}</div><a className="all-projects" href={profile.github} target="_blank" rel="noopener noreferrer">{t('projects.more')} <ArrowUpRight size={18}/></a></div></section>
       <section id="certificates" className="section container"><motion.div {...reveal}><SectionHeading index="06" label={t('nav.certificates')} title={t('certificates.title')} intro={t('certificates.intro')}/></motion.div><Certificates items={certificates}/></section>
-      <section id="contact" className="section contact-section"><div className="container"><motion.div {...reveal} className="contact-card"><div className="contact-kicker"><span className="status-dot"/> {t('contact.kicker')}</div><h2>{t('contact.title')}<br/><em>{t('contact.titleAccent')}</em></h2><p>{t('contact.description')}</p><div className="contact-actions">{email&&<a className="button button-primary" href={'mailto:'+email}>{t('contact.email')} <Mail size={18}/></a>}<a className="button button-secondary" href={profile.github} target="_blank" rel="noopener noreferrer">GitHub <SiGithub size={18}/></a></div><div className="contact-socials">{profile.linkedin&&<a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={15}/></a>}{profile.codewars&&<a href={profile.codewars} target="_blank" rel="noopener noreferrer">Codewars <ArrowUpRight size={15}/></a>}</div></motion.div></div></section>
+      <ContactSection />
     </main>
     <footer className="footer"><div className="container footer-inner"><a href="#top" className="wordmark">a<span>.</span></a><span>© {currentYear} {name}. {t('footer.crafted')}</span><a href="#top">{t('footer.back')} ↑</a></div></footer>
   </>

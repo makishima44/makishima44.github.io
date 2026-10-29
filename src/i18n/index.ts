@@ -17,7 +17,7 @@ const resources = {
     education:{title:'Always learning.',intro:'Formal study, courses and independent learning.',emptyTitle:'Education & learning',emptyText:'Training and education entries will appear here after their details are added.'},
     projects:{title:'Selected work.',selected:'SELECTED WORK',intro:'Real projects, built to explore ideas and solve practical frontend problems.',more:'Explore all repositories',source:'Source code',demo:'Live demo',artPlaceholder:'Editorial project artwork, not a product screenshot',previewAlt:'Preview of {{name}}'},
     certificates:{title:'Credentials & growth.',intro:'Verified certifications and completed programs.',emptyTitle:'Certificates coming soon',emptyText:'Verified certificates will be displayed here when documents are added.',view:'View {{name}}',document:'View document',verify:'Verify credential'},
-    contact:{kicker:'LET’S CONNECT',title:'Have a project',titleAccent:'in mind?',description:'I’m open to conversations about frontend roles, collaborations and interesting product challenges.',email:'Send an email'},
+    contact:{kicker:'LET’S CONNECT',title:'Have a project',titleAccent:'in mind?',description:'I’m open to conversations about frontend roles, collaborations and interesting product challenges.',githubDescription:'Explore my code, projects and experiments.',codewarsDescription:'I regularly solve challenges to sharpen my problem-solving skills and keep growing as a developer.',linkedinDescription:'Connect with me professionally.',telegramDescription:'Message me directly.',emailDescription:'Write to me about work or collaboration.'},
     footer:{crafted:'Designed and built with care.',back:'Back to top'}
   }},
   ru:{translation:{
@@ -32,7 +32,7 @@ const resources = {
     education:{title:'Всегда учусь.',intro:'Образование, курсы и самостоятельное изучение.',emptyTitle:'Образование и обучение',emptyText:'Сведения об образовании и курсах появятся после добавления данных.'},
     projects:{title:'Избранные проекты.',selected:'ИЗБРАННЫЕ ПРОЕКТЫ',intro:'Реальные проекты для исследования идей и решения практических задач.',more:'Все репозитории',source:'Исходный код',demo:'Открыть сайт',artPlaceholder:'Декоративное оформление, не скриншот проекта',previewAlt:'Превью проекта {{name}}'},
     certificates:{title:'Развитие и достижения.',intro:'Подтверждённые сертификаты и программы.',emptyTitle:'Сертификаты появятся здесь',emptyText:'После добавления документов здесь будут показаны подтверждённые сертификаты.',view:'Открыть {{name}}',document:'Открыть документ',verify:'Проверить сертификат'},
-    contact:{kicker:'НА СВЯЗИ',title:'Есть интересная',titleAccent:'задача?',description:'Открыт к общению о фронтенд-вакансиях, сотрудничестве и интересных продуктовых задачах.',email:'Написать письмо'},
+    contact:{kicker:'НА СВЯЗИ',title:'Есть интересная',titleAccent:'задача?',description:'Открыт к общению о фронтенд-вакансиях, сотрудничестве и интересных продуктовых задачах.',githubDescription:'Мои проекты, исходный код и эксперименты.',codewarsDescription:'Стараюсь регулярно решать задачи, тренировать мышление и развиваться как разработчик.',linkedinDescription:'Давайте общаться в профессиональной сети.',telegramDescription:'Напишите мне напрямую.',emailDescription:'Пишите по вопросам работы и сотрудничества.'},
     footer:{crafted:'Сделано с вниманием к деталям.',back:'Наверх'}
   }}
 }

@@ -8,14 +8,17 @@ export type TimelineItem = {
   description: Localized; technologies: string[]; achievements: Localized[]; url?: string
 }
 export type Certificate = { id: string; title: Localized; issuer: string; date: Localized; file: string; image?: string; verifyUrl?: string }
+export type Profile = { name: Localized; email: string; github: string; linkedin: string; telegram: string; codewars: string; cv: string }
 
-// TODO: Add verified personal details and a real CV PDF. Empty values stay hidden.
-export const profile = {
-  name: { en: 'Artur Shyshelau', ru: 'Artur Shyshelau' } satisfies Localized,
-  email: '',
+// Contact details come from the public GitHub profile and its README.
+// TODO: Add a real CV PDF. Empty optional values stay hidden.
+export const profile: Profile = {
+  name: { en: 'Artur Shyshelau', ru: 'Artur Shyshelau' },
+  email: 'metallist15431543@email.com',
   github: 'https://github.com/makishima44',
-  linkedin: '',
-  codewars: '',
+  linkedin: 'https://www.linkedin.com/in/artur-shyshelau/',
+  telegram: 'https://t.me/Artur_Shyshelau',
+  codewars: 'https://www.codewars.com/users/Artur%20Shyshelau',
   cv: '',
 }
 
