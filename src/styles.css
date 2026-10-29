@@ -16,3 +16,4 @@
 @media(max-width:390px){.language-switch{gap:3px}.header-actions{gap:7px}.hero h1{font-size:44px}.hero-visual{height:180px}.hero-actions .button{width:100%}.skill-card{font-size:11px;padding:9px;gap:7px}.skill-icon svg{width:21px;height:21px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 .hero-name{margin-top:32px;color:var(--muted);font:600 11px ui-monospace,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase}
+.section-heading h2{overflow-wrap:anywhere}
