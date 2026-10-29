@@ -5,7 +5,7 @@ export type Project = {
 }
 export type TimelineItem = {
   id: string; organization: string; role: Localized; period: Localized; kind?: Localized;
-  description: Localized; technologies: string[]; achievements: Localized[]; url?: string
+  description: Localized; technologies: string[]; achievements: Localized[]; url?: string; image?: string
 }
 export type Certificate = { id: string; title: Localized; issuer: string; date: Localized; file: string; image?: string; verifyUrl?: string }
 export type Profile = { name: Localized; portrait: string; email: string; github: string; linkedin: string; telegram: string; codewars: string; cv: string }
@@ -24,7 +24,21 @@ export const profile: Profile = {
 }
 
 // Add only verified internship and education entries here.
-export const experience: TimelineItem[] = []
+export const experience: TimelineItem[] = [{
+  id:'it-incubator-internship',
+  organization:'IT-INCUBATOR',
+  role:{en:'Frontend Developer',ru:'Frontend-разработчик'},
+  period:{en:'Sep 2025 – Jun 2026 · 10 mos',ru:'Сентябрь 2025 – июнь 2026 · 10 месяцев'},
+  kind:{en:'Internship',ru:'Стажировка'},
+  description:{
+    en:'Worked in a team environment on a full-scale project, gaining hands-on experience with real development tasks, Git, code reviews, and team collaboration.',
+    ru:'Работал в команде над полноценным проектом: выполнял реальные задачи разработки, использовал Git, участвовал в проверке кода и командной работе.'
+  },
+  technologies:['Git','Code review','Team collaboration'],
+  achievements:[],
+  url:'https://www.linkedin.com/in/artur-shyshelau/edit/forms/position/3023942317/',
+  image:'/images/it-incubator.jpg'
+}]
 export const education: TimelineItem[] = []
 export const certificates: Certificate[] = []
 
