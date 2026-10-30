@@ -7,7 +7,8 @@ export type TimelineItem = {
   id: string; organization: string; role: Localized; period: Localized; kind?: Localized;
   description: Localized; technologies: string[]; achievements: Localized[]; detailsIntro?: Localized; details?: Localized[]; url?: string; image?: string; badge?: 'codewars'
 }
-export type Certificate = { id: string; title: Localized; issuer: string; date: Localized; file: string; image?: string; verifyUrl?: string }
+export type CredentialBadge = { id: string; title: Localized; image: string; verifyUrl: string }
+export type Certificate = { id: string; title: Localized; issuer: string; date: Localized; file?: string; image?: string; verifyUrl?: string; relatedBadges?: CredentialBadge[] }
 export type Profile = { name: Localized; portrait: string; email: string; github: string; linkedin: string; telegram: string; codewars: string; cv: string }
 
 // Contact details come from the public GitHub profile and its README.
@@ -66,7 +67,19 @@ export const education: TimelineItem[] = [{
   url:profile.codewars,
   badge:'codewars'
 }]
-export const certificates: Certificate[] = []
+export const certificates: Certificate[] = [{
+  id:'openai-apply-ai-at-work',
+  title:{en:'Apply AI at Work',ru:'Apply AI at Work'},
+  issuer:'OpenAI Academy',
+  date:{en:'Issued October 30, 2026 · expires April 30, 2027',ru:'Выдан 30 октября 2026 · действует до 30 апреля 2027'},
+  image:'/images/openai-apply-ai-work-certificate.png',
+  verifyUrl:'https://oaiacademy.credential.net/f8823eb8-1c17-4e05-85d9-603782d21864#acc.dKcIAnYS',
+  relatedBadges:[
+    {id:'ai-foundations',title:{en:'AI Foundations',ru:'AI Foundations'},image:'/images/openai-ai-foundations-badge.png',verifyUrl:'https://oaiacademy.credential.net/81f8d353-2ace-4b10-8e85-c12b693a5915?key=084a987577e88bf33ae7c44f22a6078596a236eb9ffc78cca2de47ea4ebdbf1c'},
+    {id:'applied-ai-foundations',title:{en:'Applied AI Foundations',ru:'Applied AI Foundations'},image:'/images/openai-applied-ai-foundations-badge.png',verifyUrl:'https://oaiacademy.credential.net/daae9556-1f4a-4d77-8d44-50696672d978?key=9b712a3f90705c51cf40ae59274acc9759abc93cf419ad1a6197b4409599d7c1'},
+    {id:'agents-and-workflows',title:{en:'Agents and Workflows',ru:'Agents and Workflows'},image:'/images/openai-agents-and-workflows-badge.png',verifyUrl:'https://oaiacademy.credential.net/2bdfdd21-d649-4ca9-91fc-de5d36375251?key=6f0bc2c6907f67b8efe0cdab7592432a862cd7986b37fd1e53964724a8766d74'}
+  ]
+}]
 
 // Projects and links were checked against the public GitHub repositories on 2026-10-29.
 export const projects: Project[] = [
