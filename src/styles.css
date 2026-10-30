@@ -71,7 +71,7 @@
 @media(hover:hover){
   .skill-card:hover{box-shadow:0 14px 34px -21px color-mix(in srgb,var(--skill-hover-color,var(--skill-color)) 76%,transparent),0 0 0 1px color-mix(in srgb,var(--skill-hover-color,var(--skill-color)) 22%,transparent)}
   .project-card,.timeline-content,.certificate-card,.contact-link{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease,background-color .28s ease}
-  .project-card:hover,.project-card:focus-within{box-shadow:0 20px 48px -32px color-mix(in srgb,var(--accent) 70%,transparent),0 0 0 1px color-mix(in srgb,var(--accent) 14%,transparent)}
+  .project-card:hover,.project-card:focus-within{transform:translateY(-3px);border-color:var(--accent2);box-shadow:0 20px 48px -32px color-mix(in srgb,var(--accent) 70%,transparent),0 0 0 1px color-mix(in srgb,var(--accent) 14%,transparent)}
   .timeline-content:hover,.timeline-content:focus-within,.certificate-card:hover,.certificate-card:focus-within{transform:translateY(-3px);border-color:var(--accent2);box-shadow:0 18px 38px -28px color-mix(in srgb,var(--accent) 65%,transparent)}
   .contact-link:hover,.contact-link:focus-visible{box-shadow:0 16px 38px -25px #a8c1ff66,0 0 0 1px #a8c1ff18}
 }
