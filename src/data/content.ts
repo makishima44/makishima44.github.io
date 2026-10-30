@@ -14,7 +14,7 @@ export type Profile = { name: Localized; portrait: string; email: string; github
 // Contact details come from the public GitHub profile and its README.
 // TODO: Add a real CV PDF. Empty optional values stay hidden.
 export const profile: Profile = {
-  name: { en: 'Artur Shyshelau', ru: 'Artur Shyshelau' },
+  name: { en: 'Artur Shyshelau', ru: 'Артур Шишелов' },
   portrait: '/images/artur-portrait.jpg',
   email: 'metallist15431543@email.com',
   github: 'https://github.com/makishima44',
