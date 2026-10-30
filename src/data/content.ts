@@ -71,7 +71,7 @@ export const certificates: Certificate[] = []
 // Projects and links were checked against the public GitHub repositories on 2026-10-29.
 export const projects: Project[] = [
   {
-    id:'react-chat', title:{en:'React Chat',ru:'React Chat'}, category:{en:'Application',ru:'Приложение'},
+    id:'react-chat', title:{en:'After Hours',ru:'After Hours'}, category:{en:'Application',ru:'Приложение'},
     description:{en:'A real-time chat application with room conversations and one-to-one direct messages.',ru:'Чат-приложение с общими комнатами и личными диалогами между пользователями.'},
     features:[{en:'Firebase Authentication and Firestore data',ru:'Авторизация Firebase и данные Firestore'},{en:'Searchable user profiles and direct conversations',ru:'Поиск пользователей и личные диалоги'}],
     tech:['React','TypeScript','Firebase','Redux Toolkit'], repository:'https://github.com/makishima44/react_chat', demo:'https://react-chat-two-ruby.vercel.app', order:1, featured:true
