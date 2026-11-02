@@ -60,7 +60,7 @@ export const education: TimelineItem[] = [{
   kind:{en:'Course',ru:'Курс'},
   description:{
     en:'Frontend Development course at IT-INCUBATOR.',
-    ru:'Курс Frontend Development в IT-INCUBATOR.'
+    ru:'Обучение frontend-разработке с акцентом на JavaScript, TypeScript и React. Практическая работа с современными веб-технологиями, разработка пользовательских интерфейсов и выполнение учебных проектов.'
   },
   technologies:[],
   achievements:[]
