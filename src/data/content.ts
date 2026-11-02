@@ -29,7 +29,7 @@ export const experience: TimelineItem[] = [{
   id:'it-incubator-internship',
   organization:'IT-INCUBATOR',
   role:{en:'Frontend Developer',ru:'Frontend-разработчик'},
-  period:{en:'Sep 2025 – Sep 2026 · 1 year',ru:'Сентябрь 2025 – сентябрь 2026 · 1 год'},
+  period:{en:'Sep 2025 – Jun 2026 · 10 months',ru:'Сентябрь 2025 – июнь 2026 · 10 месяцев'},
   kind:{en:'Internship',ru:'Стажировка'},
   description:{
     en:'Built a social platform alongside frontend and backend developers during a practical team internship.',
@@ -53,6 +53,18 @@ export const experience: TimelineItem[] = [{
   image:'/images/it-incubator.jpg'
 }]
 export const education: TimelineItem[] = [{
+  id:'it-incubator-frontend-development',
+  organization:'IT-INCUBATOR',
+  role:{en:'Frontend Development',ru:'Frontend Development'},
+  period:{en:'Jan 2024 – Aug 2025',ru:'Январь 2024 – август 2025'},
+  kind:{en:'Course',ru:'Курс'},
+  description:{
+    en:'Frontend Development course at IT-INCUBATOR.',
+    ru:'Курс Frontend Development в IT-INCUBATOR.'
+  },
+  technologies:[],
+  achievements:[]
+},{
   id:'codewars-practice',
   organization:'Codewars',
   role:{en:'Problem-solving practice',ru:'Практика решения задач'},
