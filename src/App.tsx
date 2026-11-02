@@ -43,7 +43,7 @@ function App() {
       <section id="top" className="hero container"><div className="hero-copy">
         <motion.div className="eyebrow hero-eyebrow" initial={reduced?false:{opacity:0,y:10}} animate={{opacity:1,y:0}} transition={{duration:.5}}><span className="status-dot"/> {t('hero.availability')}</motion.div>
         <div className="hero-name">{name} / {t('hero.role')}</div>
-        <motion.h1 initial={reduced?false:{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.08}}>{t('hero.line1')}<br/><em>{t('hero.line2')}</em></motion.h1>
+        <motion.h1 className={i18n.language==='ru'?'hero-title-ru':undefined} initial={reduced?false:{opacity:0,y:20}} animate={{opacity:1,y:0}} transition={{duration:.65,delay:.08}}>{t('hero.line1')}<br/><em>{t('hero.line2')}</em></motion.h1>
         <motion.p className="hero-description" initial={reduced?false:{opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{duration:.6,delay:.22}}>{t('hero.description')}</motion.p>
         <motion.div className="hero-actions" initial={reduced?false:{opacity:0,y:12}} animate={{opacity:1,y:0}} transition={{duration:.6,delay:.32}}><a className="button button-primary" href="#projects">{t('hero.projects')} <ArrowUpRight size={17}/></a><a className="button button-secondary" href="#contact">{t('hero.contact')} <ArrowRight size={17}/></a>{profile.cv&&<a className="button button-text" href={profile.cv} download>{t('hero.cv')} <ArrowDown size={17}/></a>}</motion.div>
         <div className="hero-meta"><span>React <b>·</b> TypeScript <b>·</b> JavaScript</span><span className="hero-meta-line"/><span>{t('hero.based')}</span></div>
