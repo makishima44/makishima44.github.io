@@ -15,7 +15,6 @@ export function ContactSection() {
   const telegramHandle = '@' + profile.telegram.split('/').filter(Boolean).at(-1)
   const links: ContactLink[] = [
     { id: 'github', href: profile.github, title: 'GitHub', description: t('contact.githubDescription'), detail: githubHandle, icon: <SiGithub size={29} aria-hidden="true" />, featured: true },
-    { id: 'linkedin', href: profile.linkedin, title: 'LinkedIn', description: t('contact.linkedinDescription'), detail: profile.name.en, icon: <img src="/icons/linkedin.svg" width="29" height="29" alt="" /> },
     { id: 'telegram', href: profile.telegram, title: 'Telegram', description: t('contact.telegramDescription'), detail: telegramHandle, icon: <SiTelegram size={29} color="#29A9EB" aria-hidden="true" /> },
     ...(email ? [{ id: 'email', href: 'mailto:' + email, title: 'Email', description: t('contact.emailDescription'), detail: email, icon: <Mail size={28} color="#a8c1ff" aria-hidden="true" /> }] : []),
   ].filter(link => link.href)
